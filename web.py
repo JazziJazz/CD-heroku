@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     data_atual = [datetime.today().day, datetime.today().month, datetime.today().year]
-    frase = f'Seja muito bem vindo ao seu site no Heroku, Rodrigo.\nHoje é dia {datetime.today().day} de {datetime.today().month} de {datetime.today().year}.'
+    frase = f'Seja muito bem vindo ao seu site no Heroku, Rodrigo. Hoje é dia {data_atual[0]} de {data_atual[1]} de {data_atual[2]}.'
     return frase
 
 if __name__ == "__main__":
