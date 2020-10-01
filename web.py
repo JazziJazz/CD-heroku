@@ -7,8 +7,8 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     data_atual = [datetime.today().day, datetime.today().month, datetime.today().year]
-    frase = f'Seja muito bem vindo ao seu site no Heroku, Rodrigo. Hoje é dia {data_atual[0]}/{data_atual[1]}/{data_atual[2]}.'
-    return datetime.today().day
+    frase = f'Seja muito bem vindo ao seu site no Heroku, Rodrigo. Hoje é dia {datetime.today().day}.'
+    return frase
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
