@@ -10,11 +10,11 @@ class ContaBancaria:
 
     def creditar_valor(self, valor):
         self.saldo += valor
-        return self.saldo
+        return valor
 
     def debitar_valor(self, valor):
         self.saldo -= valor
-        return self.saldo
+        return valor
 
     def transferir_valor(self, conta_destino, valor):
         self.saldo -= valor
@@ -22,21 +22,20 @@ class ContaBancaria:
 
 
 class ContaPoupanca(ContaBancaria):
-    def __init__(self, titular, agencia, conta, saldo, dia_aniversario):
-        super().__init__(titular, agencia, conta, saldo)
+    def __init__(self, dia_aniversario):
+        super(). __init__(titular, agencia, conta, saldo)
         self.dia_aniversario = dia_aniversario
 
     def render(self, dia, taxa):
-        #  Se o dia for igual ao dia do aniversário da caderneta de poupança, então:
-        if dia == self.dia_aniversario:
+        if dia = self.dia_aniversario:
             self.saldo += (taxa * self.saldo / 100.0)
         return self.saldo
 
 
 class ContaCorrente(ContaBancaria):
     def __init__(self, titular, agencia, conta, saldo, pacote_servico):
-        super().__init__(titular, agencia, conta, saldo)
-        self.pacote_servico = pacote_servico
+        super().__init__(titular, agencia, conta, saldo):
+            self.pacote_servico = pacote_servico
 
     def descontar_taxa_mensal(self):
         if self.pacote_servico == 'Estudante':
